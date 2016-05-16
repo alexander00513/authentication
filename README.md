@@ -1,6 +1,6 @@
 # Authentication
 
-This is a simple application based on WebSocket, Spring Boot, Hibernate technologies. Used STOMP over WebSocket,
+This is a simple application based on Java 8, WebSocket, Spring Boot, Hibernate technologies. Used STOMP over WebSocket,
 used default Spring message Broker. Not used redis for storing sessions,
 not used custom broker (Apache ActiveMQ, RabbitMQ, etc) and tests not wrote (simple logic, has gui) :)
 
