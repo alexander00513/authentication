@@ -1,9 +1,13 @@
 package com.gmail.bogatyr.alexander.dzen.lab.authentication.entity;
 
+import org.hibernate.envers.Audited;
 import org.hibernate.validator.constraints.Length;
 import org.hibernate.validator.constraints.NotBlank;
 
-import javax.persistence.*;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
 import java.time.ZonedDateTime;
 import java.util.Objects;
 import java.util.UUID;
@@ -12,6 +16,7 @@ import java.util.UUID;
  * Created by alexander on 14.05.16.
  */
 @Entity
+@Audited
 public class Authentication {
 
     @Id
@@ -29,8 +34,6 @@ public class Authentication {
 
     private UUID token;
     private ZonedDateTime tokenExpire;
-
-    // TODO: 14.05.16 maybe use Audit log from hibernate
 
     public Long getId() {
         return id;
